@@ -27,6 +27,19 @@
 # 		print('*' * int_width)
 # 	else:
 # 		print('*' + (" " * (int_width - 2)) + '*')
-height = 4
-for i in range(0, height):
-		print ((' ' * (height - i) + ('*' * ((height / height) + i)) + (' ' * (height - i))))
+# height = 4
+# for i in range(1, height + 1):
+# 		print ((' ' * (height - i) + ('*' * ((i + 1)) + (' ' * (height - i)))))
+# height = 4
+# for i in range(1, height+1):
+# 	spaces = (height - i) * 2 * " "
+# 	stars = (((i - 1) * 2) + 1) * "* "
+# 	print (spaces + stars)
+
+# text = "Good Morning, Vietnam."
+# for i in text:
+# 	print ((len(text) * "*") + "**")
+# 	print ("*" + text + "*")
+# 	print ((len(text) * "*") + "**")
+# 	break
+# 	

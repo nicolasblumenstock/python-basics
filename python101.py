@@ -205,40 +205,127 @@ students = [
 # to declare a function in python, you use "def"
 # fuctions always have ()
 
-def say_hello():
-	print("Hello")
+# def say_hello():
+# 	print("Hello")
 
-say_hello()
+# say_hello()
 
-def say_hello_with_name(name):
-	print("Hello, " + name)
+# def say_hello_with_name(name):
+# 	print("Hello, " + name)
 
-# say_hello_with_name() this will fail
-# say_hello_with_name("Rob","Chad") this will fail as well
-say_hello_with_name("Nick")
-# print name doesn't work because name in the function is a local variable
-def say_hello_with_default(name, in_class = "Yes"):
-	print("Hello, " + name)
-	print("Is student in class? " + in_class)
-say_hello_with_default("Carla")
-say_hello_with_default("Max", "No")
+# # say_hello_with_name() this will fail
+# # say_hello_with_name("Rob","Chad") this will fail as well
+# say_hello_with_name("Nick")
+# # print name doesn't work because name in the function is a local variable
+# def say_hello_with_default(name, in_class = "Yes"):
+# 	print("Hello, " + name)
+# 	print("Is student in class? " + in_class)
+# say_hello_with_default("Carla")
+# say_hello_with_default("Max", "No")
 
-# Functions always return something
-def return_user_name(name):
-	return name
-print(return_user_name("YingRong"))
+# # Functions always return something
+# def return_user_name(name):
+# 	return name
+# print(return_user_name("YingRong"))
 
-def make_uppercase(string):
-	return string.upper()
+# def make_uppercase(string):
+# 	return string.upper()
 
-normalized_string = [make_uppercase("Im a WilD and CrazY GUY")]
-normalized_string.append(make_uppercase("mE toO"))
-print normalized_string
-
-
+# normalized_string = [make_uppercase("Im a WilD and CrazY GUY")]
+# normalized_string.append(make_uppercase("mE toO"))
+# print normalized_string
 
 
 
+
+
+# Tuples
+
+# lists are awesome. but it's changeable. what if you
+# you wanted something that wasn't changeable?
+# a tuple is the same in all ways as a list, except;
+# 1. it's values cannot be changed
+# 2, it uses () instead of []
+# 
+# a_tuple_test = (1,5, 8)
+# print a_tuple_test[1]
+# a tuple test
+# a_tuple_test[1] = 6
+
+# dictionaries
+
+# dictionaries are very simple objects.
+# operate with a "key-value pair"
+# name = "Rob"
+# gender = "Male"
+# height = "Tall"
+
+person = {
+	"name": "Rob",
+	"gender": "Male",
+	"height": "Tall"
+
+}
+
+print (person["height"])
+
+zombie ={}
+
+# can add key-values as needed
+zombie['weapon'] = 'axe'
+zombie['health'] = 100
+zombie['startX'] = 10
+zombie['startY'] = 20
+zombie['speed'] = 10
+
+print(zombie)
+
+for key,value in zombie.items():
+	print("Zombie has a key of %s with a value of %s" % (key, value))
+	print (zombie[key])
+if (zombie['speed'] <= 5):
+	zombie['position'] = zombie['startX'] + 5
+elif(zombie['speed'] <10):
+	zombie['position'] = zombie['startX'] + 10
+else:
+	zombie['position'] = zombie['startX'] + 15
+
+zombie['pointless'] = "Why?"
+del zombie['pointless']
+print zombie
+
+player_push = "up"
+if(player_push == "up"):
+	direction = "startY"
+else:
+	direction = "startX"
+zombie[direction] += 10
+
+zombies = []
+zombies.append(
+	{
+		'speed': 10,
+		'weapon': 'fist',
+		'name': 'Hank'
+	}
+)
+zombies.append({
+	'speed': 5,
+	'weapon': 'baseball bat',
+	'name': 'Bruiser'
+	})
+
+# get the second zombies speed...
+
+print (zombies[1]['speed'])
+
+zombies[1]['victims'] = [
+	"Jane",
+	"Mike",
+	"Bob"
+]
+
+print(zombies[1]['victims'][2])
 
 
 
